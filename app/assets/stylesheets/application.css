@@ -137,3 +137,13 @@ body {
 .buttons {
   margin: 10px;
 }
+.login {
+  width: 300px;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.field-placeholder {
+  font-size: 16px;
+  font-weight: bold;
+}

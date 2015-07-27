@@ -24,12 +24,13 @@
       <div class="cover-container">
         <div class="masthead clearfix">
           <div class="inner">
-            <h3 class="masthead-brand">linkr.me</h3>
+            <h3 class="masthead-brand"><%= link_to "linkr.me", root_path %></h3>
             <nav>
               <ul class="nav masthead-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Sign In</a></li>
+                <!-- <li>%= link_to "Home", root_path %></li> -->
+                <li><a href="#">Docs</a></li>
+                <!-- <li>%= link_to "Sign Up", new_user_path %></li> -->
+                <li><%= link_to "Sign In", new_user_path %></li>
               </ul>
             </nav>
           </div>
