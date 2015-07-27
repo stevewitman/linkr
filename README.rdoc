@@ -40,3 +40,7 @@ class CreateLinks < ActiveRecord::Migration
     end
   end
 end
+
+resources:
+http://railscasts.com/episodes/250-authentication-from-scratch-revised
+see http://railscasts.com/episodes/274-remember-me-reset-password for remember_me and password_reset

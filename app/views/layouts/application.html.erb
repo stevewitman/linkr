@@ -31,8 +31,8 @@
                   <!-- <li>Signed in as %= current_user.email %>.</li> -->
                   <li><%= link_to "Sign Out", signout_path %></li>
                 <% else %>
-                  <!-- <li>%= link_to "Sign Up", signup_path %></li> -->
                   <li><%= link_to "Sign In", signin_path %></li>
+                  <li><%= link_to "Sign Up", signup_path %></li>
                 <% end %>
               </ul>
             </nav>

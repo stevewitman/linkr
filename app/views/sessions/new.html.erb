@@ -9,9 +9,13 @@
     <div class="form-group">
       <%= password_field_tag :password, nil, class: 'form-control field-placeholder', placeholder: "password"  %>
     </div>
-    <br>
     <div class="form-group">
-      <%= submit_tag "Sign In", :class => 'btn btn-lg btn-default' %>
+      <%= check_box_tag :remember_me, 1, params[:remember_me], class: 'field-checkbox'%>
+      <%= label_tag :remember_me, nil, class: 'label-checkbox pull-left' %>
+    </div>
+    <br>
+    <div class="form-group clear-both">
+      <%= submit_tag "Sign In", :class => 'btn btn-lg btn-default button-bold' %>
     </div>
   </div>
 <% end %>

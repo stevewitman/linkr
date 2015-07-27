@@ -134,7 +134,7 @@ body {
     width: 700px;
   }
 }
-.buttons {
+.button-margin {
   margin: 10px;
 }
 .login {
@@ -145,5 +145,26 @@ body {
 }
 .field-placeholder {
   font-size: 16px;
+  font-weight: bold;
+}
+
+.field-checkbox {
+  float: left;
+  margin-right: 20px;
+}
+
+.label-checkbox {
+  font-size: 16px;
+  font-weight: normal;
+  text-align: left;
+  margin-left: 10px;
+  margin-bottom: 30px;
+}
+
+.clear-both {
+  clear: both;
+}
+
+.button-bold {
   font-weight: bold;
 }
