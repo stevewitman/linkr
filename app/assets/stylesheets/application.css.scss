@@ -114,6 +114,7 @@
 
 .lead {
   color: #FFF;
+      font-size: 12px;
   padding-bottom: 16px;
 }
 
@@ -121,11 +122,34 @@
   background-color: rgba(0, 0, 0, 0.85);
 }
 
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
 @media only screen and (max-width : 480px) {
   .jumbotron {
     padding: 0px;
   }
+  .jumbotron p {
+    font-size: 16px;
+  }
   .lead {
     padding-bottom: 0px;
+  }
+  .btn-marketing {
+    margin: 8px;
+    padding: 8px;
+    width: 180px;
+    font-size: 16px;
+  }
+  .lm-logo-lg {
+    font-size: 27px;
+  }
+  .lm-txt-lg {
+    font-size: 36px;
   }
 }
