@@ -120,3 +120,12 @@
 .navbar-inverse {
   background-color: rgba(0, 0, 0, 0.85);
 }
+
+@media only screen and (max-width : 480px) {
+  .jumbotron {
+    padding: 0px;
+  }
+  .lead {
+    padding-bottom: 0px;
+  }
+}
