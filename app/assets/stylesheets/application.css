@@ -25,7 +25,7 @@
    background-color: #FFF;
    /* Margin bottom by footer height */
    margin-bottom: 60px;
-   background-image: url("bg.jpg");
+   background-image: url("/assets/bg.jpg");
  }
  .footer {
    position: absolute;
