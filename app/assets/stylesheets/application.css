@@ -14,9 +14,7 @@
  *= require_self
  */
 
- body {
-   background-color: #FFF;
- }
+
  /* Sticky footer styles
  -------------------------------------------------- */
  html {
@@ -24,8 +22,10 @@
    min-height: 100%;
  }
  body {
+   background-color: #FFF;
    /* Margin bottom by footer height */
    margin-bottom: 60px;
+   background-image: url("bg.jpg");
  }
  .footer {
    position: absolute;
@@ -33,7 +33,7 @@
    width: 100%;
    /* Set the fixed height of the footer here */
    height: 60px;
-   background-color: #f5f5f5;
+  background: rgba(0,0,0,0.85);
  }
 
 
@@ -56,6 +56,67 @@
  code {
    font-size: 80%;
  }
- .footer {
-   background-color: #222;
- }
+
+
+.lm-logo-sm {
+  font-size: 9px;
+  color: yellow;
+}
+
+.lm-logo-md {
+  font-size: 18px;
+  color: yellow;
+}
+.lm-logo-lg {
+  font-size: 36px;
+  color: yellow;
+}
+
+.lm-txt-sm {
+  font-family: 'Audiowide', cursive;
+  font-size: 12px;
+  color: yellow;
+}
+
+.lm-txt-md {
+  font-family: 'Audiowide', cursive;
+  font-size: 24px;
+  color: yellow;
+}
+.lm-txt-lg {
+  font-family: 'Audiowide', cursive;
+  font-size: 48px;
+  color: yellow;
+}
+
+.jumbotron {
+  background: rgba(0,0,0,0.7);
+  border: 1px solid #555555;
+  box-shadow: 0 2px 22px rgba(0, 0, 0, 0.4);
+}
+
+.btn-marketing {
+  background-color: rgba(0,0,0,0.85);
+  margin: 16px;
+  padding: 20px;
+  width: 220px;
+  font-size: 24px;
+  font-weight: bold;
+  color: yellow;
+  border-color: yellow;
+}
+
+.btn-marketing:hover {
+  background-color: rgba(255, 255, 0, 0.40);
+  color: #000;
+  border-color: #000;
+}
+
+.lead {
+  color: #FFF;
+  padding-bottom: 16px;
+}
+
+.navbar-inverse {
+  background-color: rgba(0, 0, 0, 0.85);
+}
