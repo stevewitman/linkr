@@ -1,21 +1,22 @@
-
-<h1>Sign In</h1>
-<%= form_tag sessions_path do  %>
-  <br>
-  <div class="login text-center">
-    <div class="form-group">
-      <%= text_field_tag :email, nil, class: 'form-control field-placeholder', placeholder: "email" %>
-    </div>
-    <div class="form-group">
-      <%= password_field_tag :password, nil, class: 'form-control field-placeholder', placeholder: "password"  %>
-    </div>
-    <div class="form-group">
-      <%= check_box_tag :remember_me, 1, params[:remember_me], class: 'field-checkbox'%>
-      <%= label_tag :remember_me, nil, class: 'label-checkbox pull-left' %>
-    </div>
+<div class="jumbotron">
+  <h1 class="text-center"><span class="lm-logo-lg"><span class="glyphicon glyphicon-link"></span> </span><span class="lm-txt-lg">Linkr.me </h1>
+  <%= form_tag sessions_path do  %>
     <br>
-    <div class="form-group clear-both">
-      <%= submit_tag "Sign In", :class => 'btn btn-lg btn-default button-bold' %>
+    <div class="login text-center">
+      <div class="form-group">
+        <%= text_field_tag :email, nil, class: 'form-control field-placeholder', placeholder: "email" %>
+      </div>
+      <div class="form-group">
+        <%= password_field_tag :password, nil, class: 'form-control field-placeholder', placeholder: "password"  %>
+      </div>
+      <div class="form-group">
+        <%= check_box_tag :remember_me, 1, params[:remember_me], class: 'field-checkbox'%>
+        <%= label_tag :remember_me, nil, class: 'label-checkbox pull-left' %>
+      </div>
+      <br>
+      <div class="form-group clear-both">
+        <%= submit_tag "Sign In", :class => 'btn btn-lg btn-default btn-marketing' %>
+      </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>

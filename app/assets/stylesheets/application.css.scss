@@ -21,6 +21,7 @@ html {
   position: relative;
   min-height: 100%;
 }
+
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
@@ -52,11 +53,6 @@ body {
    padding-right: 15px;
    padding-left: 15px;
  }
-
- code {
-   font-size: 80%;
- }
-
 
 .lm-logo-sm {
   font-size: 9px;
@@ -90,10 +86,11 @@ body {
 }
 
 .jumbotron {
-margin-top: 10%;
+  margin-top: 15%;
   background: rgba(0,0,0,0.7);
   border: 1px solid #000;
   box-shadow: 0 2px 22px rgba(0, 0, 0, 0.4);
+/*   max-width: 400px; */
 }
 
 .btn-marketing {
@@ -145,4 +142,15 @@ margin-top: 10%;
   .lm-txt-lg {
     font-size: 36px;
   }
+}
+
+.field-placeholder {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.center-x {
+  text-align:center;
+}
+.center-y {
+  vertical-align:middle;
 }
