@@ -29,6 +29,7 @@ body {
   background-repeat: no-repeat;
   background-height: 100%;
 }
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -42,17 +43,30 @@ body {
  -------------------------------------------------- */
  /* Not required for template or sticky footer method. */
 
- body > .container {
-   padding: 60px 15px 0;
- }
- .container .text-muted {
-   margin: 20px 0;
- }
+body > .container {
+  padding: 60px 15px 0;
+}
 
- .footer > .container {
-   padding-right: 15px;
-   padding-left: 15px;
- }
+textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
+  border-color: yellow;
+}
+
+input[type=checkbox] {
+  -ms-transform: scale(2);
+  -moz-transform: scale(2);
+  -webkit-transform: scale(2);
+  -o-transform: scale(2);
+  transform: scale(2);
+}
+
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
 
 .lm-logo-sm {
   font-size: 9px;
@@ -84,6 +98,10 @@ body {
   font-size: 48px;
   color: yellow;
 }
+.lm-field-checkbox{
+  background-color: yellow;
+}
+
 
 .jumbotron {
   margin-top: 5%;
@@ -120,6 +138,16 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+.input-auth {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 40px;
+  width: 350px;
+  max-width:90%;
+  font-size: 24px;
+  display: inline-block;
+  color: #FFF;
+}
+
 @media only screen and (max-width : 480px) {
   .jumbotron {
     padding: 0px;
@@ -142,14 +170,8 @@ body {
   .lm-txt-lg {
     font-size: 36px;
   }
-}
-
-.input-auth {
-  background-color: rgba(0, 0, 0, 0.7);
-  height: 40px;
-  width: 350px;
-  max-width:90%;
-  font-size: 24px;
-  display: inline-block;
-
+  .input-auth {
+    height: 30px;
+    font-size: 16px;
+  }
 }
