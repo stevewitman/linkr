@@ -58,6 +58,9 @@ input[type=checkbox] {
   -o-transform: scale(2);
   transform: scale(2);
 }
+input[type=checkbox]:checked {
+  background       : yellow;
+}
 
 .container .text-muted {
   margin: 20px 0;
@@ -98,10 +101,11 @@ input[type=checkbox] {
   font-size: 48px;
   color: yellow;
 }
-.lm-field-checkbox{
-  background-color: yellow;
-}
 
+.lm-remember-checkbox-label {
+  color: #fff;
+  font-size: 16px;
+}
 
 .jumbotron {
   margin-top: 5%;
@@ -113,7 +117,7 @@ input[type=checkbox] {
 
 .btn-marketing {
   background-color: rgba(0,0,0,0.7);
-  margin: 16px;
+
   padding: 20px;
   width: 220px;
   font-size: 24px;
