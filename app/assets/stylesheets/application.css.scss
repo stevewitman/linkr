@@ -71,42 +71,61 @@ input[type=checkbox]:checked {
   padding-left: 15px;
 }
 
-.lm-logo-sm {
+.linkr-logo-sm {
   font-size: 9px;
   color: yellow;
 }
 
-.lm-logo-md {
+.linkr-logo-md {
   font-size: 18px;
   color: yellow;
 }
-.lm-logo-lg {
+.linkr-logo-lg {
   font-size: 36px;
   color: yellow;
 }
 
-.lm-txt-sm {
+.linkr-txt-sm {
   font-family: 'Audiowide', cursive;
   font-size: 12px;
   color: yellow;
 }
 
-.lm-txt-md {
+.linkr-txt-md {
   font-family: 'Audiowide', cursive;
   font-size: 24px;
   color: yellow;
 }
-.lm-txt-lg {
+.linkr-txt-lg {
   font-family: 'Audiowide', cursive;
   font-size: 48px;
   color: yellow;
 }
 
-.lm-remember-checkbox-label {
+.linkr-remember-checkbox-label {
   color: #fff;
   font-size: 16px;
 }
 
+.linkr-input-auth {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 40px;
+  width: 350px;
+  max-width:90%;
+  font-size: 24px;
+  display: inline-block;
+  color: #FFF;
+}
+
+.linkr-input-link {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 40px;
+  width: 350px;
+  max-width:90%;
+  font-size: 24px;
+  display: inline-block;
+  color: #FFF;
+}
 .jumbotron {
   margin-top: 5%;
   background: rgba(0,0,0,0.7);
@@ -142,15 +161,6 @@ input[type=checkbox]:checked {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.input-auth {
-  background-color: rgba(0, 0, 0, 0.7);
-  height: 40px;
-  width: 350px;
-  max-width:90%;
-  font-size: 24px;
-  display: inline-block;
-  color: #FFF;
-}
 
 @media only screen and (max-width : 480px) {
   .jumbotron {
@@ -168,13 +178,13 @@ input[type=checkbox]:checked {
     width: 180px;
     font-size: 16px;
   }
-  .lm-logo-lg {
+  .linkr-logo-lg {
     font-size: 27px;
   }
-  .lm-txt-lg {
+  .linkr-txt-lg {
     font-size: 36px;
   }
-  .input-auth {
+  .linkr-input-auth {
     height: 30px;
     font-size: 16px;
   }
