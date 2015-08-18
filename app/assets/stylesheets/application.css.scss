@@ -126,6 +126,12 @@ input[type=checkbox]:checked {
   display: inline-block;
   color: #FFF;
 }
+
+.linkr-btn-add {
+  text-align: center;
+  float: none;
+}
+
 .jumbotron {
   margin-top: 5%;
   background: rgba(0,0,0,0.7);
@@ -134,10 +140,24 @@ input[type=checkbox]:checked {
 /*   max-width: 400px; */
 }
 
-.btn-marketing {
-  background-color: rgba(0,0,0,0.7);
+.linkr-add-jumbotron {
+  margin-top: 10px;
+  background: rgba(0,0,0,0.7);
+  border: 1px solid #000;
+  box-shadow: 0 2px 22px rgba(0, 0, 0, 0.4);
+}
 
+.lm-modal-body {
+  margin-top: 50px;
+  background: rgba(0,0,0,0.7);
+  border: 1px solid #000;
+  box-shadow: 0 2px 22px rgba(0, 0, 0, 0.4);
+}
+
+.linkr-btn-marketing {
+  background-color: rgba(0,0,0,0.7);
   padding: 20px;
+  margin: 15px;
   width: 220px;
   font-size: 24px;
   font-weight: bold;
@@ -145,16 +165,20 @@ input[type=checkbox]:checked {
   border-color: yellow;
 }
 
-.btn-marketing:hover {
+.linkr-btn-marketing:hover {
   background-color: rgba(255, 255, 0, 0.40);
   color: #000;
   border-color: yellow;
 }
 
+.linkr-btn-add {
+  padding: 0px 10px 5px 10px;
+  width: auto;
+}
+
 .lead {
   color: #FFF;
   font-size: 12px;
-  padding-bottom: 16px;
 }
 
 .navbar-inverse {
@@ -172,7 +196,7 @@ input[type=checkbox]:checked {
   .lead {
     padding-bottom: 0px;
   }
-  .btn-marketing {
+  .linkr-btn-marketing {
     margin: 8px;
     padding: 8px;
     width: 180px;

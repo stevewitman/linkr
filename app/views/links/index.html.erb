@@ -1,33 +1,46 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg pull-left" data-toggle="modal" data-target="#myModal">
+  Add Link
+</button>
 
-<div class="collapse" id="collapseExample">
-    <div class="jumbotron">
-    <%= form_for @link do |f| %>
-      <% if @link.errors.any? %>
-        <div class="error_messages">
-          <h2>Form is invalid</h2>
-          <ul>
-            <% @user.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
-      <br>
-      <div class="links text-center">
-        <div class="form-group">
-          <%= f.text_field :title, class: 'form-control field-placeholder input-auth', placeholder: "Link Title" %>
-        </div>
-        <div class="form-group">
-          <%= f.text_field :url, class: 'form-control field-placeholder input-auth', placeholder: "Link URL"  %>
-        </div>
-        <div class="form-group">
-          <%= f.text_area :description, class: 'form-control field-placeholder input-auth', placeholder: "Notes"  %>
-        </div>
-        <br>
-        <div class="buttons">
-          <%= f.submit "Add Link", class: 'btn btn-lg btn-default btn-marketing' %>
-        </div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content lm-modal-body" >
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
-    <% end %>
+      <div class="modal-body">
+        <%= form_for @link do |f| %>
+          <% if @link.errors.any? %>
+            <div class="error_messages">
+              <h2>Form is invalid</h2>
+              <ul>
+                <% @user.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+          <br>
+          <div class="links text-center">
+            <div class="form-group">
+              <%= f.text_field :title, class: 'form-control field-placeholder', placeholder: "Link Title" %>
+            </div>
+            <div class="form-group">
+              <%= f.text_field :url, class: 'form-control field-placeholder input-auth', placeholder: "Link URL"  %>
+            </div>
+            <div class="form-group">
+              <%= f.text_area :description, class: 'form-control field-placeholder input-auth', placeholder: "Notes"  %>
+            </div>
+            <br>
+            <div class="buttons">
+              <button type="button" class="btn btn-lg btn-default linkr-btn-marketing" data-dismiss="modal">Cancel</button>
+              <%= f.submit "Add Link", class: 'btn btn-lg btn-default linkr-btn-marketing' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
