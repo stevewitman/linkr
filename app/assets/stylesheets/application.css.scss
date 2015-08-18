@@ -47,10 +47,6 @@ body > .container {
   padding: 60px 15px 0;
 }
 
-textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
-  border-color: yellow;
-}
-
 input[type=checkbox] {
   -ms-transform: scale(2);
   -moz-transform: scale(2);
@@ -58,8 +54,9 @@ input[type=checkbox] {
   -o-transform: scale(2);
   transform: scale(2);
 }
+
 input[type=checkbox]:checked {
-  background       : yellow;
+  background: yellow;
 }
 
 .container .text-muted {
@@ -117,19 +114,72 @@ input[type=checkbox]:checked {
   color: #FFF;
 }
 
+.linkr-input-auth:focus {
+  border-color: yellow;
+  -moz-box-shadow: 0 0 10px yellow;
+  -webkit-box-shadow: 0 0 10px yellow;
+  box-shadow: 0 0 10px yellow;
+}
+
+.linkr-add-link {
+  color: #yellow;
+}
+
+.modal-header {
+  border: none;
+  padding-bottom: 0px;
+}
+
+.modal-body {
+  padding-top: 0px;
+}
+
+.linkr-modal-title {
+  color: #fff;
+}
+
 .linkr-input-link {
+  border-color: green;
   background-color: rgba(0, 0, 0, 0.7);
   height: 40px;
-  width: 350px;
-  max-width:90%;
-  font-size: 24px;
+  font-weight: normal;
   display: inline-block;
   color: #FFF;
 }
 
-.linkr-btn-add {
-  text-align: center;
-  float: none;
+.linkr-input-link:focus {
+  border-color: green;
+  -moz-box-shadow: 0 0 10px green;
+  -webkit-box-shadow: 0 0 10px green;
+  box-shadow: 0 0 10px green;
+}
+
+.linkr-btn-link {
+  background-color: rgba(0,0,0,0.7);
+  padding: 20px;
+  margin: 15px 15px 15px 0px;
+  width: 220px;
+  font-size: 24px;
+  font-weight: bold;
+  color: green;
+  border-color: green;
+}
+
+.linkr-btn-link:hover {
+  background-color: rgba(0, 255, 0, 0.25);
+  color: #000;
+  border-color: green;
+}
+
+.linkr-add-close {
+  color: #9d9d9d;
+  text-shadow: none;
+  opacity: 1;
+}
+.linkr-add-close:hover {
+  color: #fff;
+  text-shadow: 0 0 10px green;
+  opacity: 1;
 }
 
 .jumbotron {
@@ -147,14 +197,14 @@ input[type=checkbox]:checked {
   box-shadow: 0 2px 22px rgba(0, 0, 0, 0.4);
 }
 
-.lm-modal-body {
+.modal-content {
   margin-top: 50px;
   background: rgba(0,0,0,0.7);
   border: 1px solid #000;
   box-shadow: 0 2px 22px rgba(0, 0, 0, 0.4);
 }
 
-.linkr-btn-marketing {
+.linkr-btn-auth {
   background-color: rgba(0,0,0,0.7);
   padding: 20px;
   margin: 15px;
@@ -165,15 +215,14 @@ input[type=checkbox]:checked {
   border-color: yellow;
 }
 
-.linkr-btn-marketing:hover {
+.linkr-btn-auth:hover {
   background-color: rgba(255, 255, 0, 0.40);
   color: #000;
   border-color: yellow;
 }
 
-.linkr-btn-add {
-  padding: 0px 10px 5px 10px;
-  width: auto;
+.modal {
+  margin-top: 30px;
 }
 
 .lead {
@@ -196,7 +245,13 @@ input[type=checkbox]:checked {
   .lead {
     padding-bottom: 0px;
   }
-  .linkr-btn-marketing {
+  .linkr-btn-auth {
+    margin: 8px;
+    padding: 8px;
+    width: 180px;
+    font-size: 16px;
+  }
+  .linkr-btn-link {
     margin: 8px;
     padding: 8px;
     width: 180px;
