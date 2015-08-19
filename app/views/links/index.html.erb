@@ -4,7 +4,7 @@
     <div class="modal-content modal-body" >
       <div class="modal-header">
         <button type="button" class="close linkr-add-close" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-        <h4 class="modal-title linkr-modal-title">Add Link</h4>
+        <h2 class="modal-title linkr-modal-title">Add Link</h2>
       </div>
       <div class="modal-body">
         <%= form_for @link do |f| %>
@@ -20,20 +20,20 @@
           <% end %>
           <br>
 
-          <div class="links text-center">
+          <div class="text-center">
             <div class="form-group">
-              <%= f.text_field :title, class: 'form-control field-placeholder linkr-input-link', placeholder: "title" %>
+              <%= f.text_field :title, class: 'form-control field-placeholder linkr-input linkr-input-link', placeholder: "title" %>
             </div>
             <div class="form-group">
-              <%= f.text_field :url, class: 'form-control field-placeholder linkr-input-link', placeholder: "link"  %>
+              <%= f.text_field :url, class: 'form-control field-placeholder linkr-input linkr-input-link', placeholder: "link"  %>
             </div>
             <div class="form-group">
-              <%= f.text_area :description, class: 'form-control field-placeholder linkr-input-link', placeholder: "notes"  %>
+              <%= f.text_area :description, class: 'form-control field-placeholder linkr-input linkr-input-link', placeholder: "notes"  %>
             </div>
             <br>
             <div class="buttons">
-              <button type="button" class="btn btn-lg btn-default linkr-btn-link" data-dismiss="modal">Cancel</button>
-              <%= f.submit "Add Link", class: 'btn btn-lg btn-default linkr-btn-link' %>
+              <button type="button" class="btn btn-lg btn-default linkr-btn" data-dismiss="modal">Cancel</button>
+              <%= f.submit "Add Link", class: 'btn btn-lg btn-default linkr-btn' %>
             </div>
           </div>
         <% end %>
