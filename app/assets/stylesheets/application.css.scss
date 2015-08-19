@@ -277,6 +277,15 @@ input[type=checkbox]:checked + span {
   border-color: yellow;
 }
 
+.linkr-link {
+  color: white;
+  font-size: 16px;
+}
+
+.linkr-link:hover {
+  color: yellow;
+}
+
 .modal {
   margin-top: 30px;
 }
