@@ -15,10 +15,18 @@ class LinksController < ApplicationController
     end
   end
 
+  def destroy
+    #delete related labels if using seperate table for lablels
+    link = Link.find(params[:id])
+    if link.destroy
+      redirect_to links_path, notice: 'Link was removed'
+    end
+  end
+
 private
 
   def link_params
-    params.require(:link).permit(:title, :url, :linkr_url, :notes, :status, :rating, :labels)
+    params.require(:link).permit(:name, :url, :linkr_url, :notes, :status, :rating, :labels)
   end
 
 end

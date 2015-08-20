@@ -1,4 +1,4 @@
-<div class="linkr-links-container">
+<div class="well linkr-links-container">
 
   <!-- Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
@@ -48,16 +48,36 @@
   </div>
 
   <div class="row">
-    <div class="col-xs-2">
-      list of labels
+    <div class="col-sm-2">
+      Sort by
+      <ul>
+        <li>Name</li>
+        <li>Site</li>
+        <li>lables</li>
+        <li>Date added</li>
+      </ul>
+      Labels
+      <ul>
+        <li>News</li>
+        <li>HTML</li>
+        <li>Rails</li>
+        <li>Projects</li>
+      </ul>
+
+
     </div>
-    <div class="col-xs-10">
+    <div class="col-sm-10">
       <table class="table table-condensed">
         <% @links.each do |link| %>
           <tr>
             <td>
               <%= link_to links_path, class: "linkr-link" do %>
-                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+              <%= link_to "",
+                link_path(link),
+                :id => "delete_#{link.id}",
+                method: :delete,
+                data: {confirm: "Are you sure?"},
+                class: "glyphicon glyphicon-remove" %>
               <% end %>
               <%= link_to links_path, class: "linkr-link" do %>
                 <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
