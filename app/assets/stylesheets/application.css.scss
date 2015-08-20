@@ -28,6 +28,13 @@ body {
   background-image: image-url("bg.jpg");
   background-repeat: no-repeat;
   background-height: 100%;
+  color: #fff;
+}
+
+.linkr-links-container {
+  background: rgba(0,0,0,0.9);
+  padding: 10px;
+  font: #fff;
 }
 
 .footer {
@@ -284,6 +291,12 @@ input[type=checkbox]:checked + span {
 
 .linkr-link:hover {
   color: yellow;
+  text-decoration: none;
+}
+
+.linkr-link:hover {
+  color: yellow;
+  text-decoration: none;
 }
 
 .modal {

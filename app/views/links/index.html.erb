@@ -1,56 +1,89 @@
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content modal-body" >
-      <div class="modal-header">
-        <button type="button" class="close linkr-add-close" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-        <h2 class="modal-title linkr-modal-title">Add Link</h2>
-      </div>
-      <div class="modal-body">
-        <%= form_for @link do |f| %>
-          <% if @link.errors.any? %>
-            <div class="error_messages">
-              <h2>Form is invalid</h2>
-              <ul>
-                <% @user.errors.full_messages.each do |message| %>
-                  <li><%= message %></li>
-                <% end %>
-              </ul>
+<div class="linkr-links-container">
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content modal-body" >
+        <div class="modal-header">
+          <button type="button" class="close linkr-add-close" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+          <h2 class="modal-title linkr-modal-title">Add Link</h2>
+        </div>
+        <div class="modal-body">
+          <%= form_for @link do |f| %>
+            <% if @link.errors.any? %>
+              <div class="error_messages">
+                <h2>Form is invalid</h2>
+                <ul>
+                  <% @user.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
+            <br>
+
+            <div class="text-center">
+              <div class="form-group">
+                <%= f.text_field :name, class: 'form-control field-placeholder linkr-input linkr-input-link', placeholder: "link name" %>
+              </div>
+              <div class="form-group">
+                <%= f.text_field :url, class: 'form-control field-placeholder linkr-input linkr-input-link', placeholder: "link url"  %>
+              </div>
+              <div class="form-group">
+                <%= f.text_field :labels, class: 'form-control field-placeholder linkr-input linkr-input-link', placeholder: "lables (e.g., News, To do, summer vacation)"  %>
+              </div>
+              <div class="form-group">
+                <%= f.text_area :notes, class: 'form-control field-placeholder linkr-input linkr-input-link', placeholder: "notes"  %>
+              </div>
+              <br>
+              <div class="buttons">
+                <button type="button" class="btn btn-lg btn-default linkr-btn" data-dismiss="modal">Cancel</button>
+                <%= f.submit "Add Link", class: 'btn btn-lg btn-default linkr-btn' %>
+              </div>
             </div>
           <% end %>
-          <br>
-
-          <div class="text-center">
-            <div class="form-group">
-              <%= f.text_field :title, class: 'form-control field-placeholder linkr-input linkr-input-link', placeholder: "title" %>
-            </div>
-            <div class="form-group">
-              <%= f.text_field :url, class: 'form-control field-placeholder linkr-input linkr-input-link', placeholder: "link"  %>
-            </div>
-            <div class="form-group">
-              <%= f.text_area :description, class: 'form-control field-placeholder linkr-input linkr-input-link', placeholder: "notes"  %>
-            </div>
-            <br>
-            <div class="buttons">
-              <button type="button" class="btn btn-lg btn-default linkr-btn" data-dismiss="modal">Cancel</button>
-              <%= f.submit "Add Link", class: 'btn btn-lg btn-default linkr-btn' %>
-            </div>
-          </div>
-        <% end %>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
+  <div class="row">
+    <div class="col-xs-2">
+      list of labels
+    </div>
+    <div class="col-xs-10">
+      <table class="table table-condensed">
+        <% @links.each do |link| %>
+          <tr>
+            <td>
+              <%= link_to links_path, class: "linkr-link" do %>
+                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+              <% end %>
+              <%= link_to links_path, class: "linkr-link" do %>
+                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+              <% end %>
+            </td>
+            <td>
+              <%= link_to link.name, link.url, target: "_blank", class: "linkr-link" %></div>
+            </td>
+            <td>
+              summitfree.com
+            </td>
+            <td>
+              <%= link.labels %>
+            </td>
+            <td>
+              <%= link.notes %>
+            </td>
 
-<% @links.each do |link| %>
-<div class="">
+          </tr>
+        <% end %>
+      </table>
+    </div>
+
+  </div>
 
 
   <!--  http://stackoverflow.com/questions/18689846/edit-record-in-bootstrap-modal -->
-<%= link_to links_path, class: "linkr-link" do %>
-    <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
-<% end %>
-  &nbsp;&nbsp;<%= link_to link.title, link.url, target: "_blank", class: "linkr-link" %>
+
 </div>
-<% end %>
