@@ -37,6 +37,10 @@ body {
   font: #fff;
 }
 
+.linkr-link-row {
+  padding: 3px;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -287,18 +291,49 @@ input[type=checkbox]:checked + span {
 .linkr-link {
   color: white;
   font-size: 16px;
+  padding-right: 10px;
+  text-decoration: none;
+
+}
+.linkr-link:hover {
+  color: lime;
+  text-decoration: none;
+}
+.linkr-link:visited {
+  text-decoration: none !important;
+    text-decoration: none;
 }
 
-.linkr-link:hover {
+
+
+.linkr-edit-link {
+  color: #9d9d9d;
+  font-size: 12px;
+  padding-right: 10px;
+    text-decoration: none;
+}
+
+.linkr-edit-link:hover {
   color: yellow;
   text-decoration: none;
 }
 
-.linkr-link:hover {
-  color: yellow;
+.linkr-remove-link {
+  color: #9d9d9d;
+  font-size: 12px;
+  padding-right: 5px;
+    text-decoration: none;
+}
+.linkr-remove-link:hover {
+  color: red;
   text-decoration: none;
 }
 
+.ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
 .modal {
   margin-top: 30px;
 }
