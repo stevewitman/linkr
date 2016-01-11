@@ -13,7 +13,7 @@
     <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
       <div class="jumbotron">
         <h1 class="text-center"><span class="linkr-logo-lg"><span class="glyphicon glyphicon-link"></span> </span><span class="linkr-txt-lg">Linkr.me</span></h1>
-        <%= form_tag sessions_path do  %>
+        <%= form_tag users_path do  %>
           <br>
           <div class="login text-center">
             <div class="form-group">
@@ -27,7 +27,7 @@
             </div>
             <br>
             <div class="form-group">
-              <%= submit_tag "Sign Up", :class => 'btn btn-lg btn-default linkr-btn' %>
+              <%= f.submit "Sign Up", :class => "btn btn-lg btn-default linkr-btn" %>
             </div>
           </div>
         <% end %>
