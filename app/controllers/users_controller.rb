@@ -8,6 +8,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user_id
+      cookies[:auth_token] = @user.auth_token
       flash[:notice] = "Thank you for signing up!"
       redirect_to links_path  
     else
