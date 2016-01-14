@@ -3,4 +3,5 @@
 	<h5>Date Created: <%= @user.created_at %></h5>
 	<h5>Date Modified: <%= @user.created_at %></h5>
 	<h5>Auth Token: <%= @user.auth_token %></h5>
+	<%= link_to 'Delete', user_path(@user), class: "btn btn-danger", method: :delete, data: {confirm: "Are you sure?"} %>
 </div>

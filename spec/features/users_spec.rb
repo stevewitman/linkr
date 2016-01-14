@@ -41,10 +41,13 @@ feature "Users" do
       email: "testuser2@mail.com",
       password: 'test')
 		sign_in(user1)
-    visit "/users"
+		visit "/users"
+		expect(page).to have_content(user1.email)
     expect(page).to have_content(user2.email)
-    user_last = User.order(:id).last
-    click_on "delete_#{user_last.id}"
+		user_last = User.order(:id).last
+   	click_on user2.email
+		click_on "Delete"
+		expect(page).to have_content(user1.email)
     expect(page).to have_no_content(user2.email)
 	end
 
