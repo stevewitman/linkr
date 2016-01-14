@@ -28,7 +28,6 @@ feature "Users" do
       password: 'test')
     sign_in(user1)
     visit "/users"
-    save_and_open_page
     expect(page).to have_content(user1.email)
     expect(page).to have_content(user2.email)
     expect(page).to have_content(user3.email)
