@@ -15,9 +15,28 @@ feature "Users" do
    	expect(page).to have_content("testuser")
 	end
 
-	scenario "A user can change their password" do
-		visit "/"
+	# change to Admin Users can view users
+	scenario "Users can view users index" do
+		user1 = create_user(
+      email: "testuser1@mail.com",
+      password: 'test')
+		user2 = create_user(
+      email: "testuser2@mail.com",
+      password: 'test')
+		user3 = create_user(
+      email: "testuser3@mail.com",
+      password: 'test')
+    sign_in(user1)
+    visit "/users"
+    save_and_open_page
+    expect(page).to have_content(user1.email)
+    expect(page).to have_content(user2.email)
+    expect(page).to have_content(user3.email)
+	end 
 
-	end
+	# scenario "A user can change their password" do
+	# 	visit "/"
+
+	# end
 
 end

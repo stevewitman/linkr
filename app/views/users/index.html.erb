@@ -1,0 +1,20 @@
+<div class="well linkr-links-container">
+	<% @users.each do |user| %>
+		<div class="row">
+			<div class="col-xs-3">
+				<%= user.created_at %>
+			</div>
+			<div class="col-xs-4">
+				<%= link_to user.email, user %>
+			</div>
+			<div class="col-xs-4">
+				<%= user.auth_token %>
+			</div>
+		</div>
+	<% end %>
+</div>
+
+
+
+
+
