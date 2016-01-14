@@ -33,6 +33,21 @@ feature "Users" do
     expect(page).to have_content(user3.email)
 	end 
 
+	scenario "Users can delete users from index" do
+		user1 = create_user(
+      email: "testuser1@mail.com",
+      password: 'test')
+		user2 = create_user(
+      email: "testuser2@mail.com",
+      password: 'test')
+		sign_in(user1)
+    visit "/users"
+    expect(page).to have_content(user2.email)
+    user_last = User.order(:id).last
+    click_on "delete_#{user_last.id}"
+    expect(page).to have_no_content(user2.email)
+	end
+
 	# scenario "A user can change their password" do
 	# 	visit "/"
 
