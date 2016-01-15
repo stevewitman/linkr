@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
 
   def index
-    @users = User.all
+    if current_user
+      @users = User.where('id != ?', current_user.id)
+    else
+      @users = User.all
+    end
   end
 
   def show
@@ -28,6 +32,7 @@ class UsersController < ApplicationController
   def destroy
     #delete related labels if using seperate table for lablels
     user = User.find(params[:id])
+    puts '+++++++++++', current_user
     if user.destroy
       redirect_to users_path, notice: 'User was removed'
     end
