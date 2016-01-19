@@ -310,11 +310,12 @@ input[type=checkbox]:checked + span {
   color: #9d9d9d;
   font-size: 12px;
   padding-right: 10px;
-    text-decoration: none;
+  text-decoration: none;
+  float: right;
 }
 
 .linkr-edit-link:hover {
-  color: yellow;
+  color: red;
   text-decoration: none;
 }
 
@@ -345,6 +346,31 @@ input[type=checkbox]:checked + span {
 
 .navbar-inverse {
   background-color: rgba(0, 0, 0, 0.7);
+}
+.cell {
+  width: 100%;
+  height: 100%;
+  width: 270px;
+  background-color:rgba(0,0,0,0.8);
+  border-right:solid 1px #303030;
+  border-left:solid 1px #303030;
+  border-bottom:solid 1px #303030; 
+  padding-top:4px;
+  padding-bottom:3px;
+  padding-left:8px;
+  font-size: 13px; 
+  font-style:normal;
+  font-weight:normal;
+  vertical-align:middle; 
+  text-align:left;
+}
+  
+.cell a { 
+   color:#A2D60F;
+}
+.cell:hover a {
+  text-decoration: none;
+  color: yellow;
 }
 
 

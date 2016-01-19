@@ -1,5 +1,3 @@
-<div class="well linkr-links-container">
-
   <!-- Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
@@ -47,51 +45,20 @@
   </div>
 
   <div class="row">
-    <div class="col-sm-2">
-      <!-- Sort by
-      <ul>
-        <li>Name</li>
-        <li>Site</li>
-        <li>lables</li>
-        <li>Date added</li>
-      </ul>
-      Labels
-      <ul>
-        <li>News</li>
-        <li>HTML</li>
-        <li>Rails</li>
-        <li>Projects</li>
-      </ul> -->
-
-
-    </div>
-    <div class="col-sm-10">
+    <div class="col-sm-3">
       <% @links.each do |link| %>
-        <div class="row linkr-link-row">
-          <div class="col-xs-4">
-            <%= link_to "", link_path(link), :id => "delete_#{link.id}", method: :delete,
-              data: {confirm: "Are you sure?"}, class: "glyphicon glyphicon-remove linkr-remove-link" %>
-            <%= link_to links_path do %>
-              <span class="glyphicon glyphicon-edit linkr-edit-link" aria-hidden="true"></span>
-            <% end %>
-            <%= link_to link.name, link.url, target: "_blank", class: "linkr-link" %>
-            <span class="text-muted"><%= URI.parse(link.url).host %></span>
-          </div>
-          <div class="col-xs-4">
-            <% if  link.attributes['labels'] %>
-              [<%= link.labels %>]
-            <% end %>
-          </div>
-          <div class="col-xs-4 ellipsis">
-            <%= link.notes %>
-          </div>
+        <div class="cell">
+          <%= link_to link.url, html_options = {target: "_blank"} do %>
+            <%= link.name %>
+          <% end %>
+          <div class="glyphicon glyphicon-edit linkr-edit-link" aria-hidden="true"></div>
         </div>
       <% end %>
     </div>
-
   </div>
 
 
   <!--  http://stackoverflow.com/questions/18689846/edit-record-in-bootstrap-modal -->
 
-</div>
+
+

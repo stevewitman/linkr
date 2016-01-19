@@ -1,0 +1,45 @@
+body {
+ font-family: Verdana, Geneva, Sans-Serif;
+ color: gray;
+ font-size: 12px;
+ font-weight: normal; 
+ background-color: Black;
+ background-image: url('../images/bg.jpg');
+}
+.section
+{
+ color:#65B2FF;
+ background-color:#181818;
+ padding-top:5px;
+ padding-bottom:5px;
+ padding-left:5px;
+ font-size: 15px;
+ font-style:normal; 
+ font-weight:bold; 
+ vertical-align:top;
+ border-top:solid 1px #303030;
+ border-right:solid 1px #303030;
+ border-left:solid 1px #303030;
+ border-bottom:solid 1px #303030; 
+ text-align:left;
+}
+.cell
+{
+ color:#DE0303;
+ background-color:#181818;
+ padding-top:5px;
+ padding-bottom:5px;
+ padding-left:5px;
+ font-size: 13px; 
+ font-style:normal;
+ font-weight:normal;
+ vertical-align:middle;
+ border-right:solid 1px #303030;
+ border-left:solid 1px #303030;
+ border-bottom:solid 1px #303030; 
+ text-align:left;
+}
+.cell A:link {text-decoration: none; color: #A2D60F;}
+.cell A:visited {text-decoration: none; color: #A2D60F;}
+.cell A:active {text-decoration: none; color: #A2D60F;}
+.cell A:hover {text-decoration: none; color: yellow;}
