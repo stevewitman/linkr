@@ -15,8 +15,8 @@ feature "Users" do
    	expect(page).to have_content("testuser")
 	end
 
-	# change to Admin Users can view users
-	scenario "Users can view users index" do
+	# change to Admin Users can view all users (except current user)
+	scenario "Users can view all users (except current user)" do
 		user1 = create_user(
       email: "testuser1@mail.com",
       password: 'test')
@@ -28,12 +28,11 @@ feature "Users" do
       password: 'test')
     sign_in(user1)
     visit "/users"
-    expect(page).to have_content(user1.email)
     expect(page).to have_content(user2.email)
     expect(page).to have_content(user3.email)
 	end 
 
-	scenario "Users can delete users from index" do
+	scenario "Users can delete users from index (except current user)" do
 		user1 = create_user(
       email: "testuser1@mail.com",
       password: 'test')
@@ -42,12 +41,10 @@ feature "Users" do
       password: 'test')
 		sign_in(user1)
 		visit "/users"
-		expect(page).to have_content(user1.email)
     expect(page).to have_content(user2.email)
 		user_last = User.order(:id).last
    	click_on user2.email
 		click_on "Delete"
-		expect(page).to have_content(user1.email)
     expect(page).to have_no_content(user2.email)
 	end
 
