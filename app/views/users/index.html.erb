@@ -1,6 +1,6 @@
 <div class="well linkr-links-container">
 	<% @users.each do |user| %>
-		<div class="row">
+		<div class="row" class="<%= user.id %>">
 			<div class="col-xs-3">
 				<%= user.created_at %>
 			</div>

@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'bcrypt', '~> 3.1.7'
 
+
 group :doc do
 	gem 'sdoc', '~> 0.4.0'
 end
@@ -28,4 +29,3 @@ end
 group :development do
 	 gem 'web-console', '~> 2.0'
 end
-

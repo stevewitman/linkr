@@ -32,7 +32,6 @@ class UsersController < ApplicationController
   def destroy
     #delete related labels if using seperate table for lablels
     user = User.find(params[:id])
-    puts '+++++++++++', current_user
     if user.destroy
       redirect_to users_path, notice: 'User was removed'
     end
