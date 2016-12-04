@@ -8,6 +8,11 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'bcrypt', '~> 3.1.7'
+gem 'devise'
+
+group :doc do
+	gem 'sdoc', '~> 0.4.0'
+end
 
 group :doc do
 	gem 'sdoc', '~> 0.4.0'
